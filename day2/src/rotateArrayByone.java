@@ -1,12 +1,10 @@
 public class rotateArrayByone {
-
-    //rotate array by one gfg basic problem
     public static void rotateArray(int[] arr, int n){
         int lastElement = arr[n-1];
-        for(int i=0;i<n;i++){
+        for(int i=n-1;i>=0;i--){
 
-            if((i+1)<n){
-                arr[i] = arr[i+1];
+            if((i-1)>=0){
+                arr[i] = arr[i-1];
             }else {
                 arr[0] = lastElement;
             }
@@ -18,8 +16,8 @@ public class rotateArrayByone {
 
     }
     public static void main(String[] args){
-        int[] arr = {5,2,3,4,1,7,8};
-        int n = 7;
+        int[] arr = {1,2,5,4,8};
+        int n = 5;
         rotateArray(arr, n);
     }
 }
